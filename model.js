@@ -1,8 +1,11 @@
-//Write missing codes here
-const schema = mongoose.Schema({
+const mongoose = require("mongoose");
+
+const blogSchema = new mongoose.Schema({
   title: String,
   content: String,
   img_url: String,
 });
 
-//Write missing codes here
+const BlogModel = mongoose.model("blog", blogSchema);
+
+module.exports = BlogModel;
